@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "Itlize-Angular": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Itlize-Angular"
+    }
+  },
+  "defaultProject": "Itlize-Angular",
+  "cli": {
+    "analytics": "d18595ec-edba-4343-917a-6781ad6c42f3"
+  }
 }

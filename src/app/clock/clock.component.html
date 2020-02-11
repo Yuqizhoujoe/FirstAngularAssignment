@@ -1,0 +1,25 @@
+<div class="clock-container">
+    <div class="time">
+      <span class="hour" [textContent]="showHr()" *ngIf="showHour; else hrBlock" (click) = "handleHour()">
+      </span> : 
+      <span class="minute" [textContent]="showMin()" *ngIf="showMinute; else minBlock" (click) = "handleMin()">
+      </span> : 
+      <span class="second" [textContent]="showSec()" *ngIf="showSecond; else secBlock" (click) = "handleSec()">
+      </span>
+    </div>
+</div>
+
+<ng-template #hrBlock>
+  <input type="text" class="text-box" (keyup.enter) = "onHourEnter()"/>
+  <input type="submit" class="submit-box" (keyup.enter) = "onHourEnter()"/>
+</ng-template>
+
+<ng-template #minBlock>
+  <input type="text" class="text-box" (keyup.enter) = "onMinuteEnter()"/>
+  <input type="submit" class="submit-box" (keyup.enter) = "onMinuteEnter()"/>
+</ng-template>
+
+<ng-template #secBlock>
+  <input type="text" class="text-box" (keyup.enter) = "onSecondEnter()"/>
+  <input type="submit" class="submit-box" (keyup.enter) = "onSecondEnter()"/>
+</ng-template>
